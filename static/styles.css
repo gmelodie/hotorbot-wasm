@@ -1,0 +1,78 @@
+/* Set body appearance */
+body {
+  font-family: 'Open Sans', sans-serif;
+  background-color: #F5F5F5;
+}
+
+/* Set container appearance */
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 30vh;
+}
+
+/* Set card appearance */
+.card {
+  background-color: #FFFFFF;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  padding: 50px;
+  margin-bottom: 20px;
+  text-align: center;
+  transition: transform 0.3s ease-in-out;
+  max-width: 600px;
+  width: 100%;
+}
+
+/* Set card hover effect */
+.button:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Set card title appearance */
+.card h2 {
+  font-size: 2.5rem;
+  font-weight: 300;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+/* Set card description appearance */
+.card p {
+  font-size: 18px;
+  margin-bottom: 20px;
+  color: #4A4A4A;
+}
+
+/* Set button appearance */
+.button {
+  background-color: #FF6B6B;
+  color: #FFFFFF;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 1.5rem;
+  font-weight: 300;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  margin-right: 10px;
+}
+
+/* Set "Like" button appearance */
+.button.like {
+  background-color: #00C853;
+}
+
+/* Set "Like" button hover appearance */
+.button.like:hover {
+  background-color: #009F43;
+}
+
+/* Set "Dislike" button hover appearance */
+.button.dislike:hover {
+  background-color: #FF4B4B;
+}
+
