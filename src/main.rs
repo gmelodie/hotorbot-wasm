@@ -1,4 +1,5 @@
 use rand::seq::SliceRandom;
+use web_sys::window;
 use yew::prelude::*;
 
 #[derive(PartialEq)]
@@ -31,8 +32,8 @@ fn rand_lang(ProgLangProps { langs }: &ProgLangProps) -> Html {
         <div class="card">
             <h2>{format!("{}", lang.name)}</h2>
             <div class="button-container">
-                <button class="button">{ "Bot" }</button>
-                <button class="button like">{ "Hot" }</button>
+                <button onclick={|_: MouseEvent| window().unwrap().location().reload().unwrap() } class="button">{ "Not" }</button>
+                <button onclick={|_: MouseEvent| window().unwrap().location().reload().unwrap() } class="button like">{ "Bot" }</button>
             </div>
         </div>
     }
