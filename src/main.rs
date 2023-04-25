@@ -32,7 +32,7 @@ fn rand_lang(ProgLangProps { langs }: &ProgLangProps) -> Html {
         <div class="card">
             <h2>{format!("{}", lang.name)}</h2>
             <div class="button-container">
-                <button onclick={|_: MouseEvent| window().unwrap().location().reload().unwrap() } class="button">{ "Not" }</button>
+                <button onclick={|_: MouseEvent| window().unwrap().location().reload().unwrap() } class="button dislike">{ "Not" }</button>
                 <button onclick={|_: MouseEvent| window().unwrap().location().reload().unwrap() } class="button like">{ "Bot" }</button>
             </div>
         </div>
@@ -54,6 +54,7 @@ fn app() -> Html {
     ];
     html! {
         <>
+        <h1>{"Hot or Bot 2"}</h1>
         <div class="container">
           <RandLang langs={languages} /> // choose random language
         </div>
