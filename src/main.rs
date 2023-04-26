@@ -1,4 +1,6 @@
 use rand::seq::SliceRandom;
+use std::fs::File;
+use std::io::{BufRead, BufReader};
 use web_sys::window;
 use yew::prelude::*;
 
@@ -41,16 +43,27 @@ fn rand_lang(ProgLangProps { langs }: &ProgLangProps) -> Html {
 
 #[function_component(App)]
 fn app() -> Html {
-    // TODO: load languages from file
     let languages = vec![
-        ProgLang::new("Rust".to_owned()),
+        ProgLang::new("Python".to_owned()),
+        ProgLang::new("Elixir".to_owned()),
+        ProgLang::new("Clojure".to_owned()),
+        ProgLang::new("Julia".to_owned()),
+        ProgLang::new("Bash/Shell".to_owned()),
+        ProgLang::new("Go".to_owned()),
+        ProgLang::new("Java".to_owned()),
+        ProgLang::new("Kotlin".to_owned()),
+        ProgLang::new("PHP".to_owned()),
+        ProgLang::new("C#".to_owned()),
+        ProgLang::new("Swift".to_owned()),
+        ProgLang::new("R".to_owned()),
+        ProgLang::new("Ruby".to_owned()),
         ProgLang::new("C".to_owned()),
         ProgLang::new("C++".to_owned()),
-        ProgLang::new("C#".to_owned()),
-        ProgLang::new("Python".to_owned()),
-        ProgLang::new("Java".to_owned()),
-        ProgLang::new("JavaScript".to_owned()),
+        ProgLang::new("Matlab".to_owned()),
         ProgLang::new("TypeScript".to_owned()),
+        ProgLang::new("Scala".to_owned()),
+        ProgLang::new("Rust".to_owned()),
+        ProgLang::new("Perl".to_owned()),
     ];
     html! {
         <>
